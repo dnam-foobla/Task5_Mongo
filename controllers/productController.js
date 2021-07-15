@@ -59,7 +59,10 @@ module.exports.putProduct = async (req, res) => {
   const newProduct = {
     $set: { ...req.body, _id: id },
   };
-  const result = await Product.findByIdAndUpdate(id, newProduct)
-    .then(res.sendStatus(200))
-    .catch(res.sendStatus(400));
+  try {
+    await Product.findByIdAndUpdate(id, newProduct);
+  } catch (err) {
+    res.sendStatus(400);
+  }
+  res.sendStatus(200);
 };
