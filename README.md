@@ -25,8 +25,8 @@ APIs:
 Schema product
 ```javascript
 {
-name: String,
-amount: Number,
-price: Number
+  name: String,
+  amount: Number,
+  price: Number
 }
 ```
