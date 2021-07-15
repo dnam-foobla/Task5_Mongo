@@ -20,3 +20,13 @@ APIs:
 * POST: product/create : create new product, you can pass name, amount, price parameters into req.body
 * PUT: product/:id : update product with specific id, you can pass name, amount, price parameters into req.body
 * DELETE: product/:id : delete product with specific id
+
+
+Schema product
+```javascript
+{
+name: String,
+amount: Number,
+price: Number
+}
+```
